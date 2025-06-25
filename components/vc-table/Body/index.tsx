@@ -122,14 +122,11 @@ export default defineComponent<BodyProps<any>>({
         <WrapperComponent class={`${prefixCls}-tbody`}>
           {/* Measure body column width with additional hidden col */}
           {measureColumnWidth && (
-            <tr
-              aria-hidden="true"
-              class={`${prefixCls}-measure-row`}
-              style={{ height: 0, fontSize: 0 }}
-            >
+            <tr aria-hidden="true" class={`${prefixCls}-measure-row`} style={{ height: 0 }}>
               {columnsKey.map(columnKey => (
                 <MeasureCell
                   key={columnKey}
+                  columns={flattenColumns}
                   columnKey={columnKey}
                   onColumnResize={onColumnResize}
                 />
