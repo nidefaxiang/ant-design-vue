@@ -33,7 +33,8 @@ export default defineComponent<MeasureCellProps>({
     });
     return () => {
       const filter = props.columns.find((item: any) => getColumnKey(item) === props.columnKey);
-      const tdText = filter && filter.title ? filter.title : '&nbsp;';
+      const tdText =
+        filter && filter.title && props.columnKey !== INTERNAL_KEY_PREFIX ? filter.title : '&nbsp;';
       return (
         <VCResizeObserver
           onResize={({ offsetWidth }) => {

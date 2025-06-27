@@ -16,7 +16,12 @@ Simple table with actions.
 </docs>
 
 <template>
-  <a-table :columns="columns" :data-source="data" :scroll="{ x: 'max-content', y: 300 }">
+  <a-table
+    :columns="columns"
+    :data-source="data"
+    :scroll="{ x: 'max-content', y: 300 }"
+    :rowSelection="true"
+  >
     <template #headerCell="{ column }">
       <template v-if="column.key === 'name'">
         <span>
