@@ -40,7 +40,10 @@ export default defineComponent<MeasureCellProps>({
             emit('columnResize', props.columnKey, offsetWidth);
           }}
         >
-          <td ref={tdRef} style={{ paddingTop: 0, paddingBottom: 0, border: 0, height: 0 }}>
+          <td
+            ref={tdRef}
+            style={{ paddingTop: 0, paddingBottom: 0, border: 0, height: 0, fontWeight: 600 }}
+          >
             <div style={{ height: 0, overflow: 'hidden' }}>{tdText}</div>
           </td>
         </VCResizeObserver>
