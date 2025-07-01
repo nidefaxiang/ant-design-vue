@@ -28,7 +28,9 @@ export default defineComponent<MeasureCellProps>({
     const tdRef = ref<HTMLTableCellElement>();
     onMounted(() => {
       if (tdRef.value) {
-        emit('columnResize', props.columnKey, tdRef.value.offsetWidth);
+        const { width } = tdRef.value.getBoundingClientRect();
+        // emit('columnResize', props.columnKey, tdRef.value.offsetWidth);
+        emit('columnResize', props.columnKey, width);
       }
     });
     return () => {

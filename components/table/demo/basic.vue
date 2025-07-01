@@ -72,6 +72,18 @@ const columns = [
     key: 'name',
   },
   {
+    title: '入库数量 (采购)',
+    dataIndex: 'aa',
+    key: 'aa',
+    sorter: true,
+  },
+  {
+    title: '单价 (采购)',
+    dataIndex: 'bb',
+    key: 'bb',
+    sorter: true,
+  },
+  {
     title: 'Surely Form AI 助手内测开放申请',
     dataIndex: 'age',
     key: 'age',

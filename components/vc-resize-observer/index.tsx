@@ -85,7 +85,7 @@ export default defineComponent({
             onResize(
               {
                 ...size,
-                offsetWidth,
+                offsetWidth: width,
                 offsetHeight,
               },
               target,
